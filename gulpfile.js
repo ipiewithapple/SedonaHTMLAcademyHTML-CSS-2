@@ -59,8 +59,8 @@ gulp.task('serve', function () {
     });
 
     gulp.watch("src/sass/*.scss", gulp.series('sass'));
-    gulp.watch("src/*.html", gulp.series('html')).on('change', browserSync.reload);
-    gulp.watch("src/js/**/*.js", gulp.series('jsmin')).on('change', browserSync.reload);;;
+    gulp.watch("src/*.html").on('change', gulp.series('html', browserSync.reload));
+    gulp.watch("src/js/**/*.js").on('change', gulp.series('jsmin', browserSync.reload));
 });
 
 // Minify img
@@ -77,7 +77,7 @@ gulp.task('imagemin', function () {
             }),
             imagemin.svgo()
         ]))
-        .pipe(gulp.dest('build/img'))
+        .pipe(gulp.dest('src/img'))
 });
 
 // Create webp images
@@ -87,7 +87,7 @@ gulp.task('webp', function () {
         .pipe(webp({
             quality: 90
         }))
-        .pipe(gulp.dest('build/img'))
+        .pipe(gulp.dest('src/img'))
 });
 
 // Create svg sprite
@@ -105,20 +105,21 @@ gulp.task('sprite', function () {
 
 gulp.task('copy', function () {
     return gulp.src([
-        'src/fonts/**/*.{woff,woff2}'
-    ], {
-        base: 'src'
-    })
-    .pipe(gulp.dest('build'))
+            'src/fonts/**/*.{woff,woff2}',
+            '/src/img/**'
+        ], {
+            base: 'src'
+        })
+        .pipe(gulp.dest('build'))
 });
 
 // Delete "build"
 
-gulp.task('clean', function(){
+gulp.task('del', function () {
     return del('build')
 });
 
 // Start tasks
 
-gulp.task('build', gulp.series('clean', 'imagemin', 'webp', 'copy', 'sprite', 'sass', 'jsmin', 'html'));
+gulp.task('build', gulp.series('del', 'sprite', 'copy', 'sass', 'jsmin', 'html'));
 gulp.task('default', gulp.series('build', 'serve'));
