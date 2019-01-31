@@ -31,7 +31,7 @@ gulp.task('html', function () {
 // Minify JS
 
 gulp.task('jsmin', function () {
-    return gulp.src('rsc/js/**/*.js')
+    return gulp.src('src/js/**/*.js')
         .pipe(uglify())
         .pipe(rename('min.script.js'))
         .pipe(gulp.dest('build/js'))
@@ -55,12 +55,12 @@ gulp.task('sass', function () {
 gulp.task('serve', function () {
 
     browserSync.init({
-        server: "./build"
+        server: "build"
     });
 
-    gulp.watch("src/sass/*.scss", gulp.series('sass'));
-    gulp.watch("src/*.html").on('change', gulp.series('html', browserSync.reload));
-    gulp.watch("src/js/**/*.js").on('change', gulp.series('jsmin', browserSync.reload));
+    gulp.watch("src/sass/**/*.scss", gulp.series('sass'));
+    gulp.watch("src/*.html", gulp.series('html')).on('change', browserSync.reload);
+    gulp.watch("src/js/**/*.js", gulp.series('jsmin')).on('change', browserSync.reload);
 });
 
 // Minify img
@@ -98,7 +98,7 @@ gulp.task('sprite', function () {
             inLineSvg: true
         }))
         .pipe(rename('sprite.svg'))
-        .pipe(gulp.dest('build/img'))
+        .pipe(gulp.dest('src/img'))
 });
 
 // Copy files to "build"
@@ -106,7 +106,7 @@ gulp.task('sprite', function () {
 gulp.task('copy', function () {
     return gulp.src([
             'src/fonts/**/*.{woff,woff2}',
-            '/src/img/**'
+            'src/img/**'
         ], {
             base: 'src'
         })
@@ -121,5 +121,6 @@ gulp.task('del', function () {
 
 // Start tasks
 
-gulp.task('build', gulp.series('del', 'sprite', 'copy', 'sass', 'jsmin', 'html'));
-gulp.task('default', gulp.series('build', 'serve'));
+gulp.task('build', gulp.series('del', 'copy', 'sass', 'jsmin', 'html'));
+gulp.task('start', gulp.series('build', 'serve'));
+gulp.task('prepimg', gulp.series('webp', 'imagemin', 'sprite'));

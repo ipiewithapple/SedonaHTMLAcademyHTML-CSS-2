@@ -12,17 +12,44 @@
     font-family: "PT Sans";
     src: url("../fonts/ptsansbold.woff") format("woff"),
         url("../fonts/ptsansbold.woff2") format("woff2");
-    font-weight: 400;
+    font-weight: 700;
     font-style: normal;
 }
 
 // Global
 
 body {
+    min-width: 320px;
+    margin: 0;
+    padding: 0;
+
+    font-size: 18px;
+    line-height: 26px;
     font-family: "PT Sans", sans-serif;
+    text-transform: uppercase;
+
+    background-color: lightgray;
 }
 
 img {
     width: 100%;
     height: auto;
 }
+
+.visually-hidden {
+	position: absolute !important;
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+	padding:0 !important;
+	border:0 !important;
+	height: 1px !important; 
+	width: 1px !important; 
+	overflow: hidden;
+}
+
+// Import
+
+@import "blocks/container.scss";
+@import "blocks/header.scss";
+@import "blocks/main-nav.scss";
+@import "blocks/nav-list.scss";

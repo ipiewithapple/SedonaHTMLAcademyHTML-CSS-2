@@ -1,0 +1,27 @@
+.main-nav {
+position: relative;
+}
+
+.main-nav--nojs{
+
+
+}
+
+.main-nav__toggle{
+position: absolute;
+top: 17px;
+right: 20px;
+
+width: 23px;
+height: 22px;
+
+border: none;
+}
+
+.main-nav__toggle--opened{
+    background: transparent url("../img/icon-menu.svg") center no-repeat;
+}
+
+.main-nav__toggle--closed{
+    background: transparent url("../img/icon-menu.svg") center no-repeat;
+}

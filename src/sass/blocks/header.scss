@@ -1,0 +1,39 @@
+.header__logo {
+    display: block;
+    align-self: center;
+    margin: 0;
+    padding: 0;
+}
+
+.header__logo img {
+    width: 102px;
+    height: 83px;
+}
+
+.header__background {
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+    margin-top: -34px;
+
+    background: url("../img/bg-intro-triangle-mobile.svg"), url("../img/bg-back-mobile@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5),(min-resolution: 144dpi){
+    .header__background{
+        background: url("../img/bg-intro-triangle-mobile.svg"), url("../img/bg-back-mobile@2x.jpg");
+        background-repeat: no-repeat;
+        background-position: bottom;
+        background-size: cover;
+    }
+}
+
+.header__background img{
+    width: 282px;
+    height: 214px;
+    margin-top: 90px;
+    margin-bottom: 85px;
+}
