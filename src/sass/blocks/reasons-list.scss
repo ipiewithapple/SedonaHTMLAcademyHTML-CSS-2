@@ -1,0 +1,50 @@
+.reasons-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.reasons-list__item {
+}
+
+.reasons-list__item:first-child{
+    background: url("../img/bg-triangle.svg");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100% auto;
+    background-color: #82b4d3;
+}
+
+.reasons-list__item--blue-bg {
+    color: #ffffff;
+    
+    background-color: #82b4d3;
+
+    &:first-child{
+        padding-top: 80px;
+    }
+}
+
+.reasons-list__title {
+    margin: 0;
+
+    text-align: center;
+    font-weight: 700;
+
+}
+
+.reasons-list__number{
+    margin: 10px 0 0 0;
+
+    font-size: 14px;
+    text-align: center;
+    font-weight: 400;
+}
+
+.reasons-list__desc{
+    margin: 10px 0 45px 0;
+
+    font-size: 14px;
+    text-align: center;
+    font-weight: 400;
+}

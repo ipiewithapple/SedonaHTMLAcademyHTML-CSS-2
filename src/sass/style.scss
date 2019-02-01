@@ -28,7 +28,7 @@ body {
     font-family: "PT Sans", sans-serif;
     text-transform: uppercase;
 
-    background-color: lightgray;
+    // background-color: gray;
 }
 
 img {
@@ -53,3 +53,7 @@ img {
 @import "blocks/header.scss";
 @import "blocks/main-nav.scss";
 @import "blocks/nav-list.scss";
+@import "blocks/main.scss";
+@import "blocks/reasons.scss";
+@import "blocks/reasons-list.scss";
+@import "blocks/reasons-feature.scss";

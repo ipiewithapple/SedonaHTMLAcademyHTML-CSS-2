@@ -40,13 +40,13 @@ gulp.task('jsmin', function () {
 // Compile sass into CSS & auto-inject into browsers + plumber, autoprefixer and minify CSS
 
 gulp.task('sass', function () {
-    return gulp.src("src/sass/main.scss")
+    return gulp.src("src/sass/style.scss")
         .pipe(plumber())
         .pipe(sass())
         .pipe(autoprefixer())
         .pipe(gulp.dest("build/css"))
         .pipe(mincss())
-        .pipe(rename('min.main.css'))
+        .pipe(rename('min.style.css'))
         .pipe(gulp.dest('build/css'))
         .pipe(browserSync.stream());
 });
