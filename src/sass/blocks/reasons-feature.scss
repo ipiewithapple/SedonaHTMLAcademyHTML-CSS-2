@@ -1,9 +1,37 @@
-.reasons-feature{
-    margin: 0;
+.reasons-feature {
+    margin: 0 0 40px 0;
     padding: 0;
 
     color: #000000;
 
     list-style: none;
     background-color: #ffffff;
+}
+
+.reasons-feature__item {
+    position: relative;
+}
+
+.reasons-feature__img {
+    position: absolute;
+    left: 20px;
+    top: 30px;
+    
+    fill: #82b5d3;
+}
+
+.reasons-feature__title {
+    margin: 0;
+    padding: 40px 0 0 70px;
+
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.reasons-feature__desc {
+    margin: 0;
+    padding: 20px 0 0 70px;
+
+    font-size: 14px;
+    font-weight: 400;
 }

@@ -17,10 +17,32 @@
     background-color: #82b5d3;
     border-bottom: solid 1px  #6890a8;
     border-top: solid 1px #9bc4dd;
+
+    &:hover{
+        background-color: #669fc2; 
+    }
+
+    &:active{
+        background-color: #5397be;
+        &>a{
+            color: #87b6d1;
+        }
+    }
 }
 
 .nav-list__item:last-child{
     background: linear-gradient(to top, #6d98b2 0%, #82b5d3 8% );
+
+    &:hover{
+        background: #669fc2; 
+    }
+
+    &:active{
+        background: #5397be;
+        &>a{
+            color: #87b6d1;
+        }
+    }
 }
 
 .nav-list__link {

@@ -1,0 +1,44 @@
+.hotel{
+    display: flex;
+    flex-direction: column;
+}
+
+.hotel__title {
+    font-size: 21px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.hotel__desc {
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.hotel__btn {
+    display: block;
+    margin: 0 auto;
+    padding: 17px 47px 19px 47px;
+    
+
+    font-size: 21px;
+    font-weight: 700;
+    text-decoration: none;
+    color: #ffffff;
+
+    background: #82b5d3;
+    
+    &:hover{
+        background-color: #669fc2; 
+    }
+
+    &:active{
+        background-color: #5397be;
+        color: #87b6d1;
+    }
+}
+
+.hotel__map{
+    margin-top: 49px;
+    margin-bottom: 41px;
+}
