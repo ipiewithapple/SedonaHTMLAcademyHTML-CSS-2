@@ -1,58 +1,92 @@
-.footer__hashtag{
+.footer {
+  margin-top: 41px;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  margin: 0 auto;
+  padding: 0;
+
+  @media(min-width: $tablet-width) {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.footer__hashtag {
+  margin-bottom: 40px;
+
+  font-size: 21px;
+  font-weight: 700;
+  text-align: center;
+
+  @media(min-width: $tablet-width) {
+    align-self: center;
+    width: 100%;
+  }
+}
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  margin: 0 0 40px 0;
+  padding: 0;
+
+  list-style: none;
+
+  @media(min-width: $tablet-width) {
+    align-self: center;
+    width: 100%;
+  }
+}
+
+.footer-social__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  margin: 0 3px;
+
+  background-color: #82b5d3;
+  fill: #ffffff;
+
+  &:hover {
+    background-color: #669fc2;
+  }
+
+  &:active {
+    background-color: #5397be;
+    fill: #87b6d1;
+  }
+}
+
+.footer__htmlacademy {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+
+  font-size: 14px;
+  text-align: center;
+
+  @media(min-width: $tablet-width) {
+    width: 100%;
+    align-self: center;
     margin-bottom: 40px;
-
-    font-size: 21px;
-    font-weight: 700;
-    text-align: center;
+  }
 }
 
-.footer-social{
-    display: flex;
-    justify-content: center;
-    margin: 0 0 40px 0;
-    padding: 0;
+.footer__htmlacademy-logo {
+  margin-left: 11px;
 
-    list-style: none;
-}
+  &:hover {
+    fill: #82b5d3;
+  }
 
-.footer-social__item{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 48px;
-    height: 48px;
-    margin: 0 3px;
-
-    background-color: #82b5d3;
-    fill: #ffffff;
-
-    &:hover{
-        background-color: #669fc2; 
-    }
-
-    &:active{
-        background-color: #5397be;
-        fill: #87b6d1;
-    }
-}
-
-.footer__htmlacademy{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
-
-    font-size: 14px;
-    text-align: center;
-}
-
-.footer__htmlacademy-logo{
-    margin-left: 11px;
-
-    &:hover{
-        fill: #82b5d3;
-    }
-    &:active{
-        fill: #b2b2b2
-    }
+  &:active {
+    fill: #b2b2b2
+  }
 }

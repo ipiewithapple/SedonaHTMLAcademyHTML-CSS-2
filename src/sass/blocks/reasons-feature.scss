@@ -1,37 +1,87 @@
 .reasons-feature {
-    margin: 0 0 40px 0;
-    padding: 0;
+  margin: 0 0 40px 0;
+  padding: 0;
 
-    color: #000000;
+  color: #000000;
 
-    list-style: none;
-    background-color: #ffffff;
+  list-style: none;
+  background-color: #ffffff;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    margin-bottom: 60px;
+  }
 }
 
 .reasons-feature__item {
-    position: relative;
+  position: relative;
+
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .reasons-feature__img {
-    position: absolute;
-    left: 20px;
-    top: 30px;
+  position: absolute;
+  left: 20px;
+  top: 30px;
+
+  fill: #82b5d3;
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+    left: 0;
+    top: 0;
+
+    margin: 60px 0 30px 0;
+
+    &--house{
+      width: 75px;
+      height: 72px;
+    }
+
+    &--gift{
+      width: 77px;
+      height: 68px;
+    }
+
+    &--burger{
+      width: 64px;
+      height: 75px;
+    }
     
-    fill: #82b5d3;
+  }
 }
 
 .reasons-feature__title {
-    margin: 0;
-    padding: 40px 0 0 70px;
+  margin: 0;
+  padding: 40px 0 0 70px;
 
-    font-size: 18px;
-    font-weight: 700;
+  font-size: 18px;
+  font-weight: 700;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 30px;
+    padding: 0;
+
+    font-size: 21px;
+  }
 }
 
 .reasons-feature__desc {
-    margin: 0;
-    padding: 20px 0 0 70px;
+  margin: 0;
+  padding: 20px 0 0 70px;
 
-    font-size: 14px;
-    font-weight: 400;
+  font-size: 14px;
+  font-weight: 400;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+
+    text-align: center;
+  }
 }

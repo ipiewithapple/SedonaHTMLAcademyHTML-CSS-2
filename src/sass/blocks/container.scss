@@ -1,6 +1,12 @@
 .container {
-    display: flex;
-    flex-direction: column;
-    min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  margin: 0 auto;
+  padding: 0;
+
+  @media (min-width: $tablet-width) {
+    min-width: $tablet-width;
     margin: 0 auto;
+  }
 }

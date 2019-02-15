@@ -33,7 +33,7 @@
 // Global
 
 body {
-    min-width: 320px;
+    min-width: $mobile-width;
     margin: 0;
     padding: 0;
 
@@ -44,6 +44,7 @@ body {
 }
 
 img {
+    display: block;
     width: 100%;
     height: auto;
 }

@@ -1,56 +1,107 @@
 .nav-list {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 
-    color: white;
-    list-style: none;
-    text-decoration: none;
+  color: white;
+  list-style: none;
+  text-decoration: none;
+
+  @media(min-width: $tablet-width) {
+    display: flex;
+    justify-content: baseline;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
 }
 
 .nav-list__item {
-    box-sizing: content-box;
-    padding: 14px 0;
-    
-    text-align: center;
-    text-decoration: none;
+  padding: 14px 0;
 
-    background-color: #82b5d3;
-    border-bottom: solid 1px  #6890a8;
-    border-top: solid 1px #9bc4dd;
+  text-align: center;
+  text-decoration: none;
 
-    &:hover{
-        background-color: #669fc2; 
-    }
+  background-color: #82b5d3;
+  border-bottom: solid 1px #6890a8;
+  border-top: solid 1px #9bc4dd;
 
-    &:active{
-        background-color: #5397be;
-        &>a{
-            color: #87b6d1;
-        }
-    }
-}
+  @media(min-width: $tablet-width) {
+    width: 100%;
+    padding: 15px 0;
 
-.nav-list__item:last-child{
-    background: linear-gradient(to top, #6d98b2 0%, #82b5d3 8% );
-
-    &:hover{
-        background: #669fc2; 
-    }
-
-    &:active{
-        background: #5397be;
-        &>a{
-            color: #87b6d1;
-        }
-    }
+    background-color: #ffffff;
+    border: none;
+  }
 }
 
 .nav-list__link {
+  margin: 0;
+  padding: 0;
+
+  font-weight: 700;
+  text-decoration: none;
+
+  color: white;
+
+
+  @media(min-width: $tablet-width) {
     margin: 0;
-    padding: 0;
-
+    font-size: 14px;
     font-weight: 700;
-    text-decoration: none;
+    color: #000000;
 
-    color: white;
+    &:hover{
+      color: #82b5d3;
+    }
+
+    &:active{
+      color: #b2b2b2;
+    }
+
+    &--active{
+      color: #89776d;
+    }
+    &--active:hover{
+      color: #5f4d41;
+    }
+    &--active:active{
+      color: #d6d0cc;
+    }
+  }
+}
+
+@media(max-width: $mobile-width-only) {
+  .nav-list__item--empty {
+    display: none;
+  }
+
+  .nav-list__item {
+    &:hover {
+      background-color: #669fc2;
+    }
+
+    &:active {
+      background-color: #5397be;
+
+      &>a {
+        color: #87b6d1;
+      }
+    }
+  }
+
+  .nav-list__item:last-child {
+    background: linear-gradient(to top, #6d98b2 0%, #82b5d3 8%);
+
+    &:hover {
+      background: #669fc2;
+    }
+
+    &:active {
+      background: #5397be;
+
+      &>a {
+        color: #87b6d1;
+      }
+    }
+  }
 }
