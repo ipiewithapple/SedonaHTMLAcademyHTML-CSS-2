@@ -32,6 +32,10 @@
   @media (min-width: $tablet-width){
     padding: 0 160px;
   }
+  @media (min-width: $desktop-width){
+    margin-bottom: 53px;
+    padding: 0 400px;
+  }
 }
 
 .hotel__btn {
@@ -66,5 +70,8 @@
 
   @media (min-width: $tablet-width){
     margin-top: 58px;
+  }
+  @media (min-width: $desktop-width){
+    margin-top: 66px;
   }
 }
