@@ -1,0 +1,22 @@
+.video {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 39px;
+}
+
+.video__title {
+  margin: 39px 0 45px;
+
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.video__desc {
+  margin: 0 0 40px 0;
+  padding: 0 40px;
+
+  text-align: center;
+  font-size: 14px;
+
+}

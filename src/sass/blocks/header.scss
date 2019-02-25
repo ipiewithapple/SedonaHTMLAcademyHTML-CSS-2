@@ -55,6 +55,9 @@
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: cover;
+    &--other-pages{
+      background-size: 200%;
+    }
 
     @media(min-width: $tablet-width) {
       background: url("../img/bg-intro-triangle-tablet.svg"), url("../img/bg-back-tablet@2x.jpg");
@@ -84,4 +87,11 @@
     margin-bottom: 91px;
 
   }
+}
+
+.header__background--other-pages img{
+  width: 230px;
+  height: 40px;
+  margin-top: 52px;
+  margin-bottom: 67px;
 }
