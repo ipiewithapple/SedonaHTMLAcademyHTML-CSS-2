@@ -1,5 +1,6 @@
 .reasons-feature {
-  margin: 0 0 40px 0;
+  margin: 0;
+  margin-bottom: 40px;
   padding: 0;
 
   color: #000000;
@@ -9,19 +10,27 @@
 
   @media (min-width: $tablet-width) {
     display: flex;
-    margin-bottom: 60px;
   }
 }
 
 .reasons-feature__item {
   position: relative;
 
+  padding-top: 40px;
+  padding-left: 70px;
+
   width: 100%;
 
   @media (min-width: $tablet-width) {
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
+    padding: 0 20px;
+
+    &--order{
+      order: 1;
+    }
   }
 }
 
@@ -36,22 +45,25 @@
     position: relative;
     left: 0;
     top: 0;
-
-    margin: 60px 0 30px 0;
+    
+    margin-bottom: 32px;
 
     &--house{
       width: 75px;
       height: 72px;
+      padding-top: 60px;
     }
 
     &--gift{
-      width: 77px;
-      height: 68px;
+      width: 64px;
+      height: 75px;
+      padding-top: 57px;
     }
 
     &--burger{
-      width: 64px;
-      height: 75px;
+      width: 77px;
+      height: 68px;
+      padding-top: 63px;
     }
     
   }
@@ -59,13 +71,13 @@
 
 .reasons-feature__title {
   margin: 0;
-  padding: 40px 0 0 70px;
+  margin-bottom: 20px;
 
   font-size: 18px;
   font-weight: 700;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     padding: 0;
 
     font-size: 21px;
@@ -74,7 +86,6 @@
 
 .reasons-feature__desc {
   margin: 0;
-  padding: 20px 0 0 70px;
 
   font-size: 14px;
   font-weight: 400;

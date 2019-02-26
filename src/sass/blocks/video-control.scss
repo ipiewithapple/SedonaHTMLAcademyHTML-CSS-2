@@ -1,5 +1,19 @@
 .video-control {
   margin-top: -45px;
+
+  @media(max-width: $mobile-width-only) {
+    &--no-mobile {
+      display: none;
+    }
+  }
+
+  @media(min-width: $tablet-width) {
+    margin-top: -93px;
+
+    &--mobile {
+      display: none;
+    }
+  }
 }
 
 .video-control__slider {
@@ -10,7 +24,13 @@
   height: 45px;
   margin: 0 auto;
 
-  background-color: rgba(0, 0, 0, 0.5)
+  background-color: rgba(0, 0, 0, 0.5);
+
+  @media(min-width: $tablet-width){
+    width: 100%;
+    height: 93px;
+  }
+
 }
 
 .video-control__slider-line {
@@ -19,7 +39,11 @@
   width: 85%;
   height: 3px;
 
-  background-color: rgba(255, 255, 255, 0.2)
+  background-color: rgba(255, 255, 255, 0.2);
+
+  @media(min-width: $tablet-width){
+    width: 70%;
+  }
 }
 
 .video-control__slider-btn {
@@ -32,6 +56,10 @@
 
   background-color: #ffffff;
   border-radius: 50%;
+
+  @media(min-width: $tablet-width){
+    left: 30%;
+  }
 }
 
 .video-control__btn {
@@ -45,46 +73,91 @@
   background-color: #f2f2f2;
 }
 
-.video-control__btn--replay{
+.video-control__btn--replay {
   padding: 0 22px;
   width: 60%;
 
   fill: #5b6870;
 
-  &:hover{
+  &:hover {
     fill: #303030;
   }
 
-  &:active{
+  &:active {
     fill: #b7b7b7;
+  }
+
+  @media(min-width: $tablet-width){
+    width: 19px;
+    padding: 0 42px 0 35px;
+
+    fill: #ffffff;
+
+    &:hover {
+      fill: #c2c2c2;
+    }
+  
+    &:active {
+      fill: #949494;
+    }
   }
 }
 
-.video-control__btn--subtitles{
+.video-control__btn--subtitles {
   width: 20%;
 
   fill: #5b6870;
 
-  &:hover{
+  &:hover {
     fill: #303030;
   }
 
-  &:active{
+  &:active {
     fill: #b7b7b7;
+  }
+
+  @media(min-width: $tablet-width){
+    width: 39px;
+    padding-left: 42px;
+
+    fill: #ffffff;
+
+    &:hover {
+      fill: #c2c2c2;
+    }
+  
+    &:active {
+      fill: #949494;
+    }
   }
 }
 
-.video-control__btn--fullscreen{
+.video-control__btn--fullscreen {
   padding: 0 22px;
   width: 20%;
 
   fill: #5b6870;
 
-  &:hover{
+  &:hover {
     fill: #303030;
   }
 
-  &:active{
+  &:active {
     fill: #b7b7b7;
+  }
+
+  @media(min-width: $tablet-width){
+    width: 40px;
+    padding: 0 41px 0 31px;
+
+    fill: #ffffff;
+
+    &:hover {
+      fill: #c2c2c2;
+    }
+  
+    &:active {
+      fill: #949494;
+    }
   }
 }

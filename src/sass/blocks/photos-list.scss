@@ -1,17 +1,30 @@
 .photos-list {
   margin: 20px 0 0 0;
-  padding: 0;
+  padding: 0 20px;
 
   list-style: none;
+
+  @media(min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 75px 0 0 0;
+    padding: 0 60px;
+  }
+
+  @media(min-width: $desktop-width) {
+    padding: 0;
+  }
 }
 
 .photos-list__img {
   padding-top: 22px;
+
+  @media(min-width: $tablet-width) {
+    padding: 0;
+  }
 }
 
 .photos-list__item {
-  padding: 0 20px;
-
   @media(max-width: $mobile-width-only) {
     &:first-child::before {
       content: "";
@@ -37,6 +50,34 @@
       background-color: #e5e5e5;
     }
   }
+
+  @media(min-width: $tablet-width) {
+    background-color: #f2f3f3;
+
+    &:nth-child(3) {
+      background-color: #ebebeb;
+    }
+  }
+
+  @media(min-width: $desktop-width) {
+    background: none;
+
+    &:nth-child(3) {
+      background: none;
+    }
+  }
+}
+
+.photos-list__item-wrapper {
+  @media(min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+  }
+
+  @media(min-width: $desktop-width) {
+    margin-top: -80px;
+  }
 }
 
 .photos-list__title {
@@ -44,28 +85,67 @@
 
   font-size: 14px;
   font-weight: 700;
+  line-height: 24px;
+
+  @media(min-width: $tablet-width) {
+    margin: 0;
+  }
 }
 
-.photos-list__autor {
+.photos-list__autor-name {
   margin: 0;
 
   font-size: 14px;
+  line-height: 24px;
   text-transform: none;
+}
+
+.photos-list__autor{
+  @media(min-width: $tablet-width) {
+    margin: 0;
+    padding: 15px 0 20px 20px;
+  }
+
+  @media(min-width: $desktop-width) {
+    width: 100%;
+
+    color: #ffffff;
+
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
 }
 
 .photos-list__likes {
   display: flex;
+  margin-bottom: 21px;
   padding-top: 11px;
+
+  @media(min-width: $tablet-width) {
+    margin: 0;
+    padding: 28px 20px 31px 0;
+  }
+
+  @media(min-width: $desktop-width) {
+    color: #ffffff;
+
+    background-color: rgba(0, 0, 0, 0.3);
+  }
 }
 
 .photos-list__likes-img {
   width: 23px;
   height: 21px;
+
+  fill: #a4a4a4;
+
+  @media(min-width: $desktop-width) {
+    fill: #ffffff;
+  }
 }
 
 .photos-list__likes-sum {
   padding-left: 14px;
-  padding-bottom: 21px;
 
   font-size: 14px;
   font-weight: 700;

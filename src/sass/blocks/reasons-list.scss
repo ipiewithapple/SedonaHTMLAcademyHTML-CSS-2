@@ -10,14 +10,15 @@
 
   @media (min-width: $tablet-width) {
     width: 100%;
-    height: auto;
-    padding: 0px;
+    height: 256px;
+    padding: 0;
   }
 }
 
 .reasons-list__img {
   @media (min-width: $tablet-width) {
-    width: 67%;
+    width: 512px;
+    height: 256px;
   }
 
   @media (min-width: $desktop-width) {
@@ -54,24 +55,24 @@
   background-color: #82b4d3;
 
   @media (min-width: $tablet-width) {
-    width: 33%;
+    width: 256px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 400px;
   }
 }
 
 .reasons-list__title {
   margin: 0;
+  margin-bottom: 10px;
 
   font-size: 18px;
   text-align: center;
   font-weight: 700;
 
   @media (min-width: $tablet-width) {
-    padding: 30px 50px 10px 50px;
-
-    font-size: 21px;
-  }
-  @media (min-width: $desktop-width) {
-    padding: 53px 120px 10px 120px;
+    padding-top: 46px;
 
     font-size: 21px;
   }
@@ -79,7 +80,8 @@
 }
 
 .reasons-list__number {
-  margin: 10px 0 0 0;
+  margin: 0;
+  margin-bottom: 10px;
 
   font-size: 14px;
   text-align: center;
@@ -87,13 +89,13 @@
 
   @media (min-width: $tablet-width) {
     margin: 0;
-    padding-bottom: 10px;
+    margin-bottom: 10px;
   }
 }
 
 .reasons-list__desc {
   margin: 0;
-  padding: 10px 0 40px 0;
+  padding-bottom: 40px;
 
   font-size: 14px;
   text-align: center;

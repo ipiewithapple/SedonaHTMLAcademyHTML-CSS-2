@@ -1,12 +1,13 @@
 .reasons__desc {
-  margin-top: 20px;
-  padding: 0 10%;
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0 40px;
 
   text-align: center;
   font-size: 14px;
   font-weight: 400;
 
   @media (min-width: $tablet-width){
-    margin-bottom: 55px;
+    margin-bottom: 50px;
   }
 }

@@ -1,5 +1,6 @@
 .main__title {
-  margin-top: 43px;
+  margin: 0;
+  margin-bottom: 30px;
   padding: 0 30px;
 
   text-align: center;
@@ -7,21 +8,6 @@
   font-weight: 700;
 
   @media (min-width: $tablet-width) {
-    margin-top: 51px;
-
     font-size: 21px;
-  }
-}
-
-.main__desc{
-  margin-top: 10px;
-  padding: 0 5%;
-
-  text-align: center;
-  font-size: 14px;
-  font-weight: 400;
-
-  @media (min-width: $tablet-width){
-    margin-bottom: 55px;
   }
 }

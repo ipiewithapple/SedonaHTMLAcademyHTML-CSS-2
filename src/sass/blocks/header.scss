@@ -1,3 +1,11 @@
+.header {
+  margin-bottom: 43px;
+
+  @media(min-width: $tablet-width) {
+    margin-bottom: 51px;
+  }
+}
+
 .header__logo {
   display: block;
   align-self: center;
@@ -30,6 +38,10 @@
   background-position: center bottom;
   background-size: cover;
 
+  &--other-pages {
+    background-size: 250%;
+  }
+
   @media(min-width: $tablet-width) {
     margin: 0;
 
@@ -38,6 +50,7 @@
     background-position: center bottom;
     background-size: 100% auto;
   }
+
   @media(min-width: $desktop-width) {
     margin: 0;
 
@@ -55,8 +68,9 @@
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: cover;
-    &--other-pages{
-      background-size: 200%;
+
+    &--other-pages {
+      background-size: 250%;
     }
 
     @media(min-width: $tablet-width) {
@@ -65,6 +79,7 @@
       background-position: center bottom;
       background-size: 100% auto;
     }
+
     @media(min-width: $desktop-width) {
       background: url("../img/bg-intro-triangle-desktop.svg"), url("../img/bg-back-desktop@2x.jpg");
       background-repeat: no-repeat;
@@ -89,9 +104,23 @@
   }
 }
 
-.header__background--other-pages img{
+.header__background--other-pages img {
   width: 230px;
   height: 40px;
   margin-top: 52px;
   margin-bottom: 67px;
+
+  @media(min-width: $tablet-width) {
+    width: 458px;
+    height: 78px;
+    margin-top: 95px;
+    margin-bottom: 117px;
+  }
+
+  @media(min-width: $desktop-width) {
+    width: 461px;
+    height: 80px;
+    margin-top: 101px;
+    margin-bottom: 120px;
+  }
 }
