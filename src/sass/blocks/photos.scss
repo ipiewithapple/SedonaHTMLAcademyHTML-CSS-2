@@ -1,3 +1,13 @@
+.photos {
+  @media (min-width: $tablet-width) {
+    margin-top: 25px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 62px;
+  }
+}
+
 .photos__title {
   margin: 0;
   margin-top: 1px;
@@ -8,19 +18,15 @@
   font-weight: 700;
 
   @media (min-width: $tablet-width) {
-    margin-top: 25px;
-
     font-size: 30px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-top: 62px;
-
     font-size: 30px;
   }
 }
 
-.photos__desc{
+.photos__desc {
   margin-top: 10px;
   padding: 0 20px;
 
@@ -28,12 +34,12 @@
   font-size: 14px;
   font-weight: 400;
 
-  @media (min-width: $tablet-width){
+  @media (min-width: $tablet-width) {
     margin-bottom: 0;
     padding: 0 170px;
   }
 
-  @media (min-width: $desktop-width){
+  @media (min-width: $desktop-width) {
     margin: 0 auto;
     padding: 0;
     width: 430px;
