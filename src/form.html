@@ -44,7 +44,62 @@
   </header>
   <!-- /.header -->
 
-
+  <main class="main">
+    <div class="container">
+      <section class="feedback">
+        <h1 class="visually-hidden">Отзывы об отелях Седоны</h1>
+        <p class="feedback__title">Оставьте свой отзыв</p>
+        <p class="feedback__desc">помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательнастях</p>
+      </section>
+      <!-- /.feedback -->
+      <form action="" class="form" method="POST">
+        <fieldset class="form__user">
+          <h2 class="form__title">Представьтесь:</h2>
+          <label for="name" class="form__label">Имя*:</label>
+          <input type="text" class="form__input" id="name" name="name" placeholder="Иван" required>
+          <label for="surname" class="form__label">Фамилия*:</label>
+          <input type="text" class="form__input" id="surname" name="surname" placeholder="Иванов" required>
+          <label for="patronymic" class="form__label">Отчество:</label>
+          <input type="text" class="form__input" id="patronymic" name="patronymic" placeholder="Иванович">
+        </fieldset>
+        <fieldset class="form__contacts">
+          <h2 class="form__title">Контактная информация:</h2>
+          <label for="phone" class="form__label">Контактный телефон*:</label>
+          <input type="tel" class="form__input" id="phone" name="e-mail" placeholder="Введите телефон" required>
+          <label for="e-mail" class="form__label">Электронная почта*:</label>
+          <input type="email" class="form__input" id="e-mail" name="e-mail" placeholder="Введите e-mail" required>
+        </fieldset>
+        <fieldset class="form__impressions">
+          <h2 class="form__title">Ваше общее впечатление:</h2>
+          <input type="radio" name="impression" id="radio-yes" class="form__radio" value="yes" checked>
+          <label for="radio-yes" class="form__label">Скорее положительное</label>
+          <input type="radio" name="impression" id="radio-no" class="form__radio" value="no">
+          <label for="radio-no" class="form__label">Скорее отрицательное</label>
+          <input type="radio" name="impression" id="radio-none" class="form__radio" value="none">
+          <label for="radio-none" class="form__label">Затрудняюсь ответить</label>
+        </fieldset>
+        <fieldset class="form__sights">
+          <h2 class="form__title">Посещенные достопримечательности:</h2>
+          <input type="checkbox" name="sight-bridge" id="sight-bridge" class="form__checkbox" checked>
+          <label for="sight-bridge" class="form__label">Мост дьявола</label>
+          <input type="checkbox" name="sight-mountain" id="sight-mountain" class="form__checkbox" checked>
+          <label for="sight-mountain" class="form__label">Гора-Колокол</label>
+          <input type="checkbox" name="sight-park" id="sight-park" class="form__checkbox" checked>
+          <label for="sight-park" class="form__label">Слайд-парк</label>
+          <input type="checkbox" name="sight-rock" id="sight-rock" class="form__checkbox">
+          <label for="sight-rock" class="form__label">Красные скалы</label>
+        </fieldset>
+        <fieldset class="form__emotions">
+          <h2 class="form__title">Опишите свои эмоции</h2>
+          <textarea name="emotions-textarea" id="emotions-textarea" cols="30" rows="10" class="form__textarea" placeholder="Опишите подробно все свои восторги"></textarea>
+        </fieldset>
+        <input class="form__submit" type="submit" value="Отправить отзыв">
+      </form>
+      <!-- /.form -->
+    </div>
+    <!-- /.container -->
+  </main>
+  <!-- /.main -->
 
   <footer class="footer">
     <div class="footer-container">
