@@ -71,19 +71,24 @@
         </fieldset>
         <fieldset class="form__contacts">
           <h2 class="form__title">Контактная информация:</h2>
-          <div class="form__wrapper form__wrapper--contacts">
-            <label for="phone" class="form__label form__label--contacts">Контактный телефон*:</label>
-            <div class="form__phone"><input type="tel" class="form__input" id="phone" name="e-mail" placeholder="Введите телефон" required></div>
-          </div>
-          <div class="form__wrapper form__wrapper--contacts">
-            <label for="e-mail" class="form__label form__label--contacts">Электронная почта*:</label>
-            <div class="form__email"><input type="email" class="form__input" id="e-mail" name="e-mail" placeholder="Введите e-mail" required></div>
+          <div class="form__contacts-wrap">
+            <div class="form__wrapper form__wrapper--contacts">
+              <label for="phone" class="form__label form__label--contacts">Контактный телефон*:</label>
+              <div class="form__phone"><input type="tel" class="form__input" id="phone" name="e-mail" placeholder="Введите телефон"
+                  required></div>
+            </div>
+            <div class="form__wrapper form__wrapper--contacts">
+              <label for="e-mail" class="form__label form__label--contacts">Электронная почта*:</label>
+              <div class="form__email"><input type="email" class="form__input" id="e-mail" name="e-mail" placeholder="Введите e-mail"
+                  required></div>
+            </div>
           </div>
         </fieldset>
         <fieldset class="form__impressions">
           <h2 class="form__title">Ваше общее впечатление:</h2>
           <div class="form__wrapper form__wrapper--impressions">
-            <input type="radio" name="impression" id="radio-yes" class="form__radio visually-hidden" value="yes" checked>
+            <input type="radio" name="impression" id="radio-yes" class="form__radio visually-hidden" value="yes"
+              checked>
             <label for="radio-yes" class="form__label">Скорее положительное</label>
           </div>
           <div class="form__wrapper form__wrapper--impressions">
@@ -97,21 +102,25 @@
         </fieldset>
         <fieldset class="form__sights">
           <h2 class="form__title">Посещенные достопримечательности:</h2>
-          <div class="form__wrapper form__wrapper--sights">
-            <input type="checkbox" name="sight-bridge" id="sight-bridge" class="form__checkbox visually-hidden" checked>
-            <label for="sight-bridge" class="form__label">Мост дьявола</label>
-          </div>
-          <div class="form__wrapper form__wrapper--sights">
-            <input type="checkbox" name="sight-mountain" id="sight-mountain" class="form__checkbox visually-hidden" checked>
-            <label for="sight-mountain" class="form__label">Гора-Колокол</label>
-          </div>
-          <div class="form__wrapper form__wrapper--sights">
-            <input type="checkbox" name="sight-park" id="sight-park" class="form__checkbox visually-hidden" checked>
-            <label for="sight-park" class="form__label">Слайд-парк</label>
-          </div>
-          <div class="form__wrapper form__wrapper--sights">
-            <input type="checkbox" name="sight-rock" id="sight-rock" class="form__checkbox visually-hidden">
-            <label for="sight-rock" class="form__label">Красные скалы</label>
+          <div class="form__sights-wrap">
+            <div class="form__wrapper form__wrapper--sights">
+              <input type="checkbox" name="sight-bridge" id="sight-bridge" class="form__checkbox visually-hidden"
+                checked>
+              <label for="sight-bridge" class="form__label">Мост дьявола</label>
+            </div>
+            <div class="form__wrapper form__wrapper--sights">
+              <input type="checkbox" name="sight-mountain" id="sight-mountain" class="form__checkbox visually-hidden"
+                checked>
+              <label for="sight-mountain" class="form__label">Гора-Колокол</label>
+            </div>
+            <div class="form__wrapper form__wrapper--sights">
+              <input type="checkbox" name="sight-park" id="sight-park" class="form__checkbox visually-hidden" checked>
+              <label for="sight-park" class="form__label">Слайд-парк</label>
+            </div>
+            <div class="form__wrapper form__wrapper--sights">
+              <input type="checkbox" name="sight-rock" id="sight-rock" class="form__checkbox visually-hidden">
+              <label for="sight-rock" class="form__label">Красные скалы</label>
+            </div>
           </div>
         </fieldset>
         <fieldset class="form__emotions">
@@ -119,7 +128,10 @@
           <textarea name="emotions-textarea" id="emotions-textarea" cols="30" rows="10" class="form__textarea"
             placeholder="Опишите подробно все свои восторги"></textarea>
         </fieldset>
-        <input class="form__submit" type="submit" value="Отправить отзыв">
+        <div class="form__wrapper form__wrapper--submit">
+          <input class="form__submit" type="submit" value="Отправить отзыв">
+          <span class="form__required">* - Обязательные поля</span>
+        </div>
       </form>
       <!-- /.form -->
     </div>
